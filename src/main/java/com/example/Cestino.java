@@ -11,8 +11,9 @@ public class Cestino {
         this.contatore = contatore;
     }
 
-    public void aggiungiMoneta(){
-        contatore = contatore + 1;
+    synchronized public void aggiungiMoneta(){
+        int appo = contatore + 1;
+        contatore = appo;
     }
 
     
